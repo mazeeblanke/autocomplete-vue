@@ -29,7 +29,7 @@
 
 <template>
     <div :class="classPrefix" @mousedown="mousefocus = true" @mouseout="mousefocus = false">
-        <input type="text" @blur="focused = false" @focus="focused = true"
+        <input :name="name" type="text" @blur="focused = false" @focus="focused = true"
             v-model="search" :placeholder="placeholder" :class="inputClass"
             @keydown.down.prevent.stop="moveDown()"
             @keydown.up.prevent.stop="moveUp()"
@@ -203,6 +203,10 @@ export default {
             type: Boolean,
             required: false,
             default: true,
+        },
+        name :{
+            type : String ,
+            required : true
         }
     },
     watch: {
