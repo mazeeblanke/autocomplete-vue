@@ -216,6 +216,9 @@ export default {
         },
         value (newValue) {
             this.search = newValue;
+        },
+        list (value){
+            this.entries = value
         }
     }
 };
