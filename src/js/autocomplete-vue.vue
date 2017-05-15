@@ -207,6 +207,10 @@ export default {
         name :{
             type : String ,
             required : true
+        },
+         autocomplete : {
+            required : false,
+            type : String,
         }
     },
     watch: {
